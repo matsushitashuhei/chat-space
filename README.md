@@ -24,7 +24,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|message|text|null: false|
+|message|text||
 |member_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
