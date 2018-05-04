@@ -1,0 +1,58 @@
+%header
+  チャットグループが作成されました。
+
+.main-wrapper
+
+  .side-var
+    .side-var__user-name
+      shuhei&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      %a{href: "#"}
+        %i{class: "fa fa-edit"}<>
+      %a{href: "#"}
+        %i{class: "fa fa-cog"}
+    .side-var__group-lists
+      .group-list--top
+        .group-list__name
+          baseball
+        .group-list__message
+          ohtani
+      .group-list
+        .group-list__name
+          soccer
+        .group-list__message
+          shohei
+
+  .main-var
+    .main-var__top
+      .group-name
+        baseball
+      %a{href: "#", class: "edit-button"}
+        edit
+      .members-list
+        MEMBERS: shuhei, ryo
+
+    .main-var__contents
+      .content
+        .content__name
+          shuhei
+          %span{style: "margin-right: 10px"}
+          %span.posted-time
+            2018/XX/XX XX:XX:XX
+        .content__message
+          野球
+      .content
+        .content__name
+          ryo
+          %span{style: "margin-right: 10px"}
+          %span.posted-time
+            2018/XX/XX XX:XX:XX
+        .content__message
+          お腹すいた
+
+    .main-var__footer
+      %form.post-message
+        %input{type: "text", placeholder: "type a message", class: "message"}
+        %label
+          %input{type: "file", style: "display: none", class: "image"}
+            %i{class: "fa fa-image"}
+        %input{type: "submit", value: "Send", class: "button"}

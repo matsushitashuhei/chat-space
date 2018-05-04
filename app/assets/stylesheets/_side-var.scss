@@ -1,0 +1,40 @@
+@import "variable";
+
+.main-wrapper {
+  .side-var {
+    width: 300px;
+    float: left;
+    &__user-name {
+      height: 127px;
+      line-height: 127px;
+      background-color: $side_top;
+      color: $white_font;
+      font-weight: bold;
+      padding: 0 20px;
+      a {
+        color: $white_font;
+        text-decoration: none;
+      }
+    }
+    &__group-lists {
+      height: 700px;
+      background-color: $side_bottom;
+      padding: 0 20px;
+      .group-list {
+        &__name {
+          font-size: 15px;
+          color: $white_font;
+          padding-bottom: 5px;
+        }
+        &__message {
+          font-size: 11px;
+          color: $white_font;
+          padding-bottom: 40px;
+        }
+        &--top {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}

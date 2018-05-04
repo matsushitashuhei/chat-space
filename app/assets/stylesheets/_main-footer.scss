@@ -1,0 +1,42 @@
+.main-wrapper{
+  .main-var {
+    width: calc(100vw - 300px);
+    float: left;
+    &__footer {
+      height: 90px;
+      background-color: gray;
+      padding: 0 40px;
+      .post-message {
+        height: 90px;
+        padding: 20px 0;
+        position: relative;
+        .message {
+          height: 46px;
+          width: calc(100% - 100px - 15px);
+          text-indent: 10px;
+          position: relative;
+          float: left;
+          &::-webkit-input-placeholder {
+           font-size: 16px;
+           color: $contents-font;
+          }
+        }
+        label {
+          cursor: pointer;
+          position: absolute;
+          top: 34px;
+          right: 125px;
+          }
+           .button {
+              height: 50px;
+              background-color: $main_blue;
+              border: none;
+              width: 100px;
+              color: $white_font;
+              float: right;
+              cursor: pointer;
+        }
+      }
+    }
+  }
+}
