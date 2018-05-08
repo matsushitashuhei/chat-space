@@ -1,4 +1,4 @@
-.main-wrapper{
+.main-wrapper {
 
   .main-chat {
     width: calc(100vw - 300px);
@@ -33,15 +33,15 @@
           top: 34px;
           right: 125px;
           }
-          
+
            .send-button {
-              height: 50px;
-              background-color: $main_blue;
-              border: none;
-              width: 100px;
-              color: $white_font;
-              float: right;
-              cursor: pointer;
+            height: 50px;
+            background-color: $main_blue;
+            border: none;
+            width: 100px;
+            color: $white_font;
+            float: right;
+            cursor: pointer;
         }
       }
     }
