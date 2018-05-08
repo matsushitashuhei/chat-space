@@ -8,10 +8,10 @@
       .user-name
         サンプルユーザー
       .user-menu
-        %a{href: "#"}
-          %i{class: "fa fa-cog"}
-        %a{href: "#"}
-          %i{class: "fa fa-edit"}
+        =link_to "#" do
+          %i.fa.fa-cog
+        =link_to "#" do
+          %i.fa.fa-edit
     .side-var__group-lists
       .group-list--top
         .group-list__name
@@ -63,7 +63,7 @@
     .main-var__top
       .group-name
         サンプルグループ１
-      %a{href: "#", class: "edit-button"}
+      =link_to "#", class: "edit-button" do
         edit
       .members-list
         MEMBERS: サンプルユーザー
