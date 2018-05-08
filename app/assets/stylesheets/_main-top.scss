@@ -1,6 +1,6 @@
-@import "variable";
+@import "clearfix";
 
-.main-wrapper{
+.main-wrapper {
 
   .main-chat {
     width: calc(100vw - 300px);
@@ -29,9 +29,9 @@
         color: $main_blue;
         text-decoration: none;
       }
-      
+
       .members-list {
-        clear: both;
+        @include clearboth();
         font-size: 12px;
         color: $member_date_font;
       }
