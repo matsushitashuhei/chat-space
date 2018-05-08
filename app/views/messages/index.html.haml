@@ -1,0 +1,34 @@
+.nortification
+  チャットグループが作成されました。
+
+.main-wrapper
+
+  .side-chat
+    .side-chat__user
+      .user-name
+        サンプルユーザー
+      .user-menu
+        =link_to "#" do
+          %i.fa.fa-cog
+        =link_to "#" do
+          %i.fa.fa-edit
+    .side-chat__groups
+      =render partial: "groups"
+
+  .main-chat
+    .main-chat__top
+      .group-name
+        サンプルグループ１
+      =link_to "#", class: "edit-button" do
+        edit
+      .members-list
+        MEMBERS: サンプルユーザー
+    .main-chat__contents
+      =render partial: "contents"
+    .main-chat__footer
+      %form.post-message
+        %input{type: "text", placeholder: "type a message", class: "message"}
+        %label
+          %input{type: "file", style: "display: none", class: "image"}
+            %i{class: "fa fa-image"}
+        %input{type: "submit", value: "Send", class: "send-button"}

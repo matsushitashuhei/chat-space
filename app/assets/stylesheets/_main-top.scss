@@ -1,0 +1,38 @@
+.main-wrapper {
+
+  .main-chat {
+    width: calc(100vw - 300px);
+    float: left;
+
+    &__top {
+      height: 126px;
+      border-bottom: thin solid $border;
+      background-color: $white_font;
+      padding: 0 40px;
+
+      .group-name {
+        font-size: 20px;
+        color: $group_font;
+        padding-top: 35px;
+        padding-bottom: 15px;
+        float: left;
+      }
+
+      .edit-button {
+        float: right;
+        margin-top: 28px;
+        line-height: 40px;
+        padding: 0 20px;
+        border: thin solid $main_blue;
+        color: $main_blue;
+        text-decoration: none;
+      }
+
+      .members-list {
+        clear: both;
+        font-size: 12px;
+        color: $member_date_font;
+      }
+    }
+  }
+}
