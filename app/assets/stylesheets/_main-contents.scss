@@ -6,7 +6,7 @@
     float: left;
     &__contents {
       overflow: scroll;
-      height: 610px;
+      height: 630px;
       background-color: $contents_back;
       padding: 0 40px;
       .content {
@@ -15,7 +15,9 @@
           color: $contents_font;
           padding: 40px 0 10px 0;
           font-weight: bold;
-          display: inline-box;
+          span {
+            margin-right: 10px;
+          }
           .posted-time {
           color: $member_date_font;
           font-size: 12px;
