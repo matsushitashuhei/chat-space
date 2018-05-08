@@ -1,7 +1,7 @@
 @import "variable";
 
 .main-wrapper {
-  .side-var {
+  .side-chat {
     width: 300px;
     float: left;
     &__user {
@@ -23,18 +23,18 @@
         }
       }
     }
-    &__group-lists {
+    &__groups {
       height: 700px;
       background-color: $side_bottom;
       padding: 20px 20px 0 20px;
       overflow: scroll;
-      .group-list {
+      .group-content {
         &__name {
           font-size: 15px;
           color: $white_font;
           padding-bottom: 5px;
         }
-        &__message {
+        &__member {
           font-size: 11px;
           color: $white_font;
           padding-bottom: 40px;

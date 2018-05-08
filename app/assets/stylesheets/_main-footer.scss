@@ -1,5 +1,5 @@
 .main-wrapper{
-  .main-var {
+  .main-chat {
     width: calc(100vw - 300px);
     float: left;
     &__footer {
@@ -27,7 +27,7 @@
           top: 34px;
           right: 125px;
           }
-           .button {
+           .send-button {
               height: 50px;
               background-color: $main_blue;
               border: none;

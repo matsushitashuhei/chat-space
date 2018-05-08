@@ -1,10 +1,10 @@
-%header
+.notification
   チャットグループが作成されました。
 
 .main-wrapper
 
-  .side-var
-    .side-var__user
+  .side-chat
+    .side-chat__user
       .user-name
         サンプルユーザー
       .user-menu
@@ -12,23 +12,23 @@
           %i.fa.fa-cog
         =link_to "#" do
           %i.fa.fa-edit
-    .side-var__group-lists
+    .side-chat__groups
       =render partial: "groups"
 
-  .main-var
-    .main-var__top
+  .main-chat
+    .main-chat__top
       .group-name
         サンプルグループ１
       =link_to "#", class: "edit-button" do
         edit
       .members-list
         MEMBERS: サンプルユーザー
-    .main-var__contents
+    .main-chat__contents
       =render partial: "contents"
-    .main-var__footer
+    .main-chat__footer
       %form.post-message
         %input{type: "text", placeholder: "type a message", class: "message"}
         %label
           %input{type: "file", style: "display: none", class: "image"}
             %i{class: "fa fa-image"}
-        %input{type: "submit", value: "Send", class: "button"}
+        %input{type: "submit", value: "Send", class: "send-button"}
