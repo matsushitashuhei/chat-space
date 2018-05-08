@@ -26,7 +26,7 @@
     &__group-lists {
       height: 700px;
       background-color: $side_bottom;
-      padding: 0 20px;
+      padding: 20px 20px 0 20px;
       overflow: scroll;
       .group-list {
         &__name {
@@ -38,9 +38,6 @@
           font-size: 11px;
           color: $white_font;
           padding-bottom: 40px;
-        }
-        &--top {
-          padding-top: 20px;
         }
       }
     }
