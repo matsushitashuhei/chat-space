@@ -1,5 +1,4 @@
 .main-wrapper {
-
   .side-chat {
     width: 300px;
     float: left;
@@ -18,11 +17,9 @@
       }
 
       .user-menu {
-        a {
           color: $white_font;
           text-decoration: none;
           float: right;
-        }
       }
     }
     &__groups {
