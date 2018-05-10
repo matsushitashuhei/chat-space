@@ -17,9 +17,11 @@
       }
 
       .user-menu {
+        a {
           color: $white_font;
           text-decoration: none;
           float: right;
+        }
       }
     }
     &__groups {
