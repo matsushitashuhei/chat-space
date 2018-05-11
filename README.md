@@ -2,8 +2,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true|
-|email|text|null: false, unique: true|
+|name|string|index: true, null: false, unique: true|
 
 ### Association
 - has_many :groups, through: members
