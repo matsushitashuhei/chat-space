@@ -26,12 +26,13 @@
     }
 
     &__groups {
-      height: 700px;
+      height: calc(100vh - 127px);
       background-color: $side_bottom;
-      padding: 20px 20px 0 20px;
+      padding: 0 20px;
       overflow: scroll;
 
       .group-content {
+        padding: 20px 0 20px 0;
         &__name {
           font-size: 15px;
           color: $white_font;
@@ -41,7 +42,6 @@
         &__message {
           font-size: 11px;
           color: $white_font;
-          padding-bottom: 40px;
         }
       }
     }
