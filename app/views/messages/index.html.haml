@@ -1,16 +1,7 @@
 .main-wrapper
 
   .side-chat
-    .side-chat__user
-      .user-name
-        = current_user.name
-      .user-menu
-        = link_to edit_user_path(current_user) do
-          %i.fa.fa-cog
-        = link_to new_group_path do
-          %i.fa.fa-edit
-    .side-chat__groups
-      = render partial: "groups"
+    = render partial: "side-chat"
 
   .main-chat
     .main-chat__top

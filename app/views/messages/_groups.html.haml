@@ -1,8 +1,0 @@
-.group-content
-  - current_user.groups.each do |group|
-    = link_to group_messages_path(group) do
-      .group-content__name
-        = group.name
-      .group-content__message
-        メッセージはまだありません。
-        
