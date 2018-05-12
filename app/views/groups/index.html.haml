@@ -1,16 +1,7 @@
 .main-wrapper
 
   .side-chat
-    .side-chat__user
-      .user-name
-        = current_user.name
-      .user-menu
-        = link_to "#" do
-          %i.fa.fa-cog
-        = link_to edit_user_path(current_user) do
-          %i.fa.fa-edit
-    .side-chat__groups
-      = render partial: "groups"
+    = render partial: "shared/side-chat"
 
   .main-chat
     .main-chat__top
@@ -21,7 +12,7 @@
       .members-list
         MEMBERS: サンプルユーザー
     .main-chat__contents
-      = render partial: "contents"
+      = render partial: "shared/contents"
     .main-chat__footer
       %form.post-message
         %input{type: "text", placeholder: "type a message", class: "message"}

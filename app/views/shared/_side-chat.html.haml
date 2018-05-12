@@ -1,0 +1,17 @@
+.side-chat__user
+  %h3.user-name
+    = current_user.name
+  .user-menu
+    = link_to edit_user_path(current_user) do
+      %i.fa.fa-cog
+    = link_to new_group_path do
+      %i.fa.fa-edit
+
+.side-chat__groups
+  - current_user.groups.each do |group|
+    .group-content
+      = link_to group_messages_path(group) do
+        .group-content__name
+          = group.name
+        .group-content__message
+          メッセージはまだありません。

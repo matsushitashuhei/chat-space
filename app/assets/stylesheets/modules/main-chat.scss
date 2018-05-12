@@ -2,5 +2,107 @@
   .main-chat {
     width: calc(100vw - 300px);
     float: left;
+
+    &__top {
+      height: 126px;
+      border-bottom: 1px solid $border;
+      background-color: $white_font;
+      padding: 0 40px;
+
+      .group-name {
+        font-size: 20px;
+        color: $group_font;
+        padding-top: 35px;
+        padding-bottom: 15px;
+        float: left;
+      }
+
+      .edit-button {
+        float: right;
+        margin-top: 28px;
+        line-height: 40px;
+        padding: 0 20px;
+        border: 1px solid $main_blue;
+        color: $main_blue;
+        text-decoration: none;
+      }
+
+      .members-list {
+        clear: both;
+        font-size: 12px;
+        color: $member_date_font;
+      }
+    }
+
+
+    &__contents {
+      overflow: scroll;
+      height: calc(100vh - 217px);
+      background-color: $contents_back;
+      padding: 0 40px;
+
+      .content {
+        &__name {
+          font-size: 16px;
+          color: $contents_font;
+          padding: 40px 0 10px 0;
+          font-weight: bold;
+
+          .posted-time {
+            margin-left: 10px;
+            color: $member_date_font;
+            font-size: 12px;
+            font-weight: normal;
+          }
+        }
+
+        &__message {
+          font-size: 14px;
+          color: $contents_font;
+        }
+      }
+    }
+
+    &__footer {
+      height: 90px;
+      background-color: gray;
+      padding: 0 40px;
+
+      .post-message {
+        height: 90px;
+        padding: 20px 0;
+        position: relative;
+
+        .message {
+          height: 46px;
+          width: calc(100% - 100px - 15px);
+          text-indent: 10px;
+          position: relative;
+          float: left;
+
+          &::-webkit-input-placeholder {
+           font-size: 16px;
+           color: $contents-font;
+          }
+        }
+
+        label {
+          cursor: pointer;
+          position: absolute;
+          top: 34px;
+          right: 125px;
+          }
+
+           .send-button {
+            height: 50px;
+            background-color: $main_blue;
+            border: none;
+            width: 100px;
+            color: $white_font;
+            float: right;
+            cursor: pointer;
+        }
+      }
+    }
   }
 }
