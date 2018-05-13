@@ -1,0 +1,24 @@
+.main-wrapper
+
+  .side-chat
+    = render partial: "shared/side-chat"
+
+  .main-chat
+    .main-chat__top
+      .group-name
+        サンプルグループ１
+      = link_to "#", class: "edit-button" do
+        edit
+      .members-list
+        MEMBERS: サンプルユーザー
+    .main-chat__contents
+      = render @messages
+    .main-chat__footer
+      .form.post-message
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'message', placeholder: 'type a message'
+          .form__mask
+            = f.label :image, class: 'image' do
+              = fa_icon 'picture-o', class: 'fa fa-image'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'send-button'
