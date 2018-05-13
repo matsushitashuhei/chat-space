@@ -1,0 +1,10 @@
+.content
+  .content__name
+    = message.user.name
+  %span.posted-time
+    = format_posted_time(message.created_at)
+.content__massage
+  - if message.content.present?
+    %p.lower-message__content
+      = message.content
+  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

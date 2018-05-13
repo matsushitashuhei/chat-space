@@ -12,7 +12,7 @@
       .members-list
         MEMBERS: サンプルユーザー
     .main-chat__contents
-      = render partial: "shared/contents"
+      = render @messages
     .main-chat__footer
       .form.post-message
         = form_for [@group, @message] do |f|
