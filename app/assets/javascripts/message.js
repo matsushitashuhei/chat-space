@@ -37,8 +37,7 @@ $(function(){
       var html = buildHTML(data);
       $('.main-chat__contents').append(html);
       $('.send-button').prop('disabled', false);
-      $('.message').val('');
-      $('.hidden').val('');
+      $('#new_message')[0].reset();
       $('.main-chat__contents').animate({scrollTop: $('.main-chat__contents')[0].scrollHeight}, 'swing');
     })
     .fail(function(){
