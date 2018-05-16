@@ -6,7 +6,7 @@
   .main-chat
     .main-chat__top
       .group-name
-        サンプルグループ１
+        = @group.name
       = link_to "#", class: "edit-button" do
         edit
       .members-list
@@ -21,4 +21,4 @@
             = f.label :image, class: 'image' do
               = fa_icon 'picture-o', class: 'fa fa-image'
               = f.file_field :image, class: 'hidden'
-          = f.submit 'Send', class: 'send-button'
+          = f.submit 'Send', class: 'send-button', id: 'new_message'

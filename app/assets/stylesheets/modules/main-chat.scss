@@ -91,7 +91,11 @@
           position: absolute;
           top: 34px;
           right: 125px;
+
+          .hidden {
+            display: none;
           }
+        }
 
            .send-button {
             height: 50px;
