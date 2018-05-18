@@ -48,7 +48,6 @@ $(function(){
 
   function getMessage() {
     var newMessageId = $('.content').last().data('message-id');
-    console.log(this);
     var url = location.pathname.match(/\/groups\/\d+\/messages/);
     $.ajax({
       url: url,
