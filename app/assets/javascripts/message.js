@@ -5,7 +5,7 @@ $(function(){
     } else {
       var image = "";
     }
-    var html = `<div class="content">
+    var html = `<div class="content" data-message-id="${message.id}">
                   <div class="content__name">
                     ${message.name}
                     <span class="posted-time">
@@ -21,6 +21,7 @@ $(function(){
                 </div>`;
     return html;
   }
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -44,4 +45,5 @@ $(function(){
       alert('error');
     })
   })
+
 })
