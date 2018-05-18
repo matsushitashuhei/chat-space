@@ -5,7 +5,7 @@ $(function(){
     } else {
       var image = "";
     }
-    var html = `<div class="content">
+    var html = `<div class="content" data-message-id="${message.id}">
                   <div class="content__name">
                     ${message.name}
                     <span class="posted-time">
@@ -21,6 +21,7 @@ $(function(){
                 </div>`;
     return html;
   }
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -44,4 +45,28 @@ $(function(){
       alert('error');
     })
   })
+
+  function getMessage() {
+    var newMessageId = $('.content').last().data('message-id');
+    var url = location.pathname.match(/\/groups\/\d+\/messages/);
+    $.ajax({
+      url: url,
+      type: "GET",
+      data: {id: newMessageId},
+      dataType: 'json'
+    })
+    .done(function(data) {
+      if (data.length == 0) return false;
+      data.forEach(function(message) {
+        var html = buildHTML(message);
+        $('.main-chat__contents').append(html);
+      })
+      $('.main-chat__contents').animate({scrollTop: $('.main-chat__contents')[0].scrollHeight}, 'swing');
+    })
+    .fail(function(){
+      alert('error');
+    })
+  }
+
+  setInterval(getMessage, 5000);
 })
